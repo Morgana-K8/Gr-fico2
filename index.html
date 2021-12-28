@@ -1,0 +1,44 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chart Js - Graphics</title>
+</head>
+<body>
+    <canvas class="pie-chart"></canvas>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+
+    <script>
+        var ctx = document.getElementsByClassName("pie-chart");
+        var charData = new Chart(ctx, {
+            type:  'pie',
+            data: {
+                labels: ["Exchange year   2017   2018   2019   2020"],
+                datasets: [
+                    {
+                    label: "Exchange - 2017",
+                    data: [5,12,20,7],
+                    borderWidth: 6,
+                    borderColor: 'rgba(6,204,6,0.85)',
+                    backgroundColor: '#ff6384',
+                    
+                }],
+                                
+        },
+        options: {
+            title: {
+                dispaly: true,
+                fontSize: 20,
+                text: "Exchange year"
+            },
+            labels: {
+                fontStyle: "bold",
+            }
+        }
+        
+        });
+
+</script>
+</body>
+</html>
